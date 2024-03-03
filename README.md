@@ -1,3 +1,3 @@
 # Student PIWo
  
-Paweł Klimek 269186 Piątek 11:15
+Paweł Klimek 269186 Piątek nieparzysty 11:15
