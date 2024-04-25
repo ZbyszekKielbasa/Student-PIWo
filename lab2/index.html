@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Zadań</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div>
+    <input type="text" id="inputField" placeholder="Nowe zadanie">
+    <select id="listSelector">
+        <option value="lowPriority">Mało pilne</option>
+        <option value="urgent">Pilne</option>
+        <option value="yesterday">Na wczoraj</option>
+    </select>
+    <button onclick="adder()">Dodaj zadanie</button>
+</div>
+<div id="listsContainer">
+    <div class="list" id="lowPriority">
+        <h3 onclick="toggleList('lowPriority')">Mało pilne</h3>
+        <ol></ol>
+    </div>
+    <div class="list" id="urgent">
+        <h3 onclick="toggleList('urgent')">Pilne</h3>
+        <ol></ol>
+    </div>
+    <div class="list" id="yesterday">
+        <h3 onclick="toggleList('yesterday')">Na wczoraj</h3>
+        <ol></ol>
+    </div>
+</div>
+
+<dialog id="my-modal">
+    <h3>Ej, skopałeś</h3>
+    <button id="closing">Dobra, przepraszam, rozumiem, poprawię się</button>
+</dialog>
+
+<dialog id="confirm-delete-modal">
+    <p id="delete-message">Czy na pewno chcesz usunąć zadanie: "<span id="task-content"></span>"?</p>
+    <button id="confirm-delete">Tak</button>
+    <button id="cancel-delete">Nie</button>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
